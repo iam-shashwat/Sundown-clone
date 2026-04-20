@@ -27,7 +27,6 @@ html, body {
     background-color: #EFEAE3;
     position: relative;
     padding: 0 2vw;
-    padding: 0 2vw;
 }
 
 nav {
@@ -188,7 +187,7 @@ nav {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
-    
+    position: relative;
 }
 
 #moving-text{
@@ -203,6 +202,10 @@ nav {
 .con{
     white-space: nowrap;
     display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #moving-text h1 {
@@ -211,11 +214,177 @@ nav {
     
 }
 
-#gola{
+.gola{
     height: 70px;
     width: 70px;
     background-color: #FE370F;
     border-radius: 50%;
     display: inline-block;
     
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    /* background-color: #FE370F; */
+    padding: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 50%;
+    line-height: 4vw;
+}
+
+#bottom-part2{
+    width: 20%;
+
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 2vw;
+}
+
+@keyframes move1{
+    from{
+        transform: translate(10%,-10%) skew(0deg) ;
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg) ;
+    }
+}
+#page2 #gola-part2{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #fe370f, #fe570a);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation: move1 6s ease-in-out infinite alternate;
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+.element{
+    height: 116px;
+    /* border-top: 1px solid #000; */
+    border-bottom: 1px solid #000;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vh;
+    overflow: hidden;
+}
+
+.element h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 10;
+}
+
+.element .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute ;
+    left: 0%;
+    top: -100%;
+    transition: all ease 0.2s;
+
+}
+
+.element:hover .overlay{
+    top: 0%;
+    transition: all ease 0.2s;
+}
+
+#elem-container{
+    position: relative;
+}
+
+#fixed-img{
+    height: 30vw;
+    width: 24vw;
+    background-color: #EFEAE3;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    z-index: 99;
+    display: none;
+}
+
+#sec{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 3vw 2vw;
+    
+}
+
+
+#dot{
+    height: 8px;
+    width: 8px;
+    background-color: #FE370F;
+    border-radius: 50%;
+}
+
+#black-box{
+    height: 110vh;
+    background-color: #000;
+    margin: 0 2vw;
+    border-radius: 21px;
+    display: flex;
+    align-items: center;
+}
+
+#black-box #tab-sec {
+  color: #EFEAE3;
+  display: flex;
+  flex-direction: column;
+  padding: 0 9vw;
+  gap: 14px;
+}
+
+#tabs {
+  position: relative;
+  border-left: 2px solid #504A45;
+  padding-left: 2vw;
+}
+
+#tab-sec h2 {
+  font-family: sun-mediu;
+  font-size: 4.5vw;
+  font-weight: bolder;
+  position: relative;
+  cursor: pointer;
+  color: #504A45;
 }
